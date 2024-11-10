@@ -24,10 +24,18 @@ async function main() {
                 // Placeholder for dataset ID
                 dataset_id: "MY_DATASET_URL",
                 // Placeholder for additional visualization settings
-                settings: {},
+                settings: {
+                    source: {
+                        type: "dataset",
+                        spec: {
+                            name: "Vega Specification JSON",
+                            id: "f9cad7b01a472135f24aae93db5a5e5a",
+                        },
+                    },
+                },
             },
             // Parse and load the visualization XML configuration
-            visualization_plugin: await parseXML("MY_VISUALIZATION.xml"),
+            visualization_plugin: await parseXML("vega.xml"),
         };
 
         // Find the root app element and attach the mock data as a JSON string to its data-incoming attribute
